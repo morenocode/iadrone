@@ -1,6 +1,6 @@
 :root {
     --fuentePrincipal: 'Poppins', sans-serif;
-    --colorOrange: #000000;
+    --colorOrange: #d30707;
     --colorFondo: #F2EDE3;
     --colorBlanco: #ffffff;
 }
@@ -76,8 +76,14 @@ img {
 
 /**LOGO**/
 
-.logo {
-    margin-top: 2rem;
+.nav-completo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px;
+    margin-right: 100px;
 }
 
 .loguito {
@@ -89,8 +95,30 @@ img {
 
 .navegacion {
     display: flex;
-    justify-content: center;
-    gap: 15rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+}
+
+.navegacion a {
+    font-size: 1.7rem;
+}
+
+.whatsapp {
+    color: white;
+    font-weight: bold;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.whatsapp:hover {
+    display: flex;
+    color: rgb(211, 0, 0);
+    font-weight: bold;
+    background-color: rgb(2, 2, 2);
+    padding: 10px 20px;
+    border-radius: 20px;
 }
 
 
@@ -177,177 +205,86 @@ img {
     border-top: 1rem solid var(--colorOrange);
 }
 
-.services h2 {
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 1.1rem;
-    font-weight: 600;
-    margin-top: 15rem;
-}
-
-.services p {
-    text-align: center;
-    margin-bottom: 15rem;
-    font-size: 1.5rem;
-}
-
-.services-section {
+.servicios {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
-    column-gap: 4rem;
-}
-
-.services-section-cuadro {
-    display: flex;
-    gap: 2rem
-}
-
-.services-section-izquierda h3 {
-    text-align: left;
-    font-size: 2rem;
-    letter-spacing: .5rem;
-    text-transform: uppercase;
-    margin: 0;
-    padding-top: 2rem;
-}
-
-.services-section-izquierda p {
-    font-size: 1.2rem;
-    text-align: left;
-    margin: 0;
-    padding-top: .2rem;
-}
-
-
-/**ABOUT**/
-
-.about-fondo {
-    background-color: var(--colorFondo);
-    margin-top: 10rem;
-}
-
-.about h2 {
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 1.2rem;
-    font-weight: 600;
-    padding-top: 10rem;
-}
-
-.about p {
-    font-size: 1.5rem;
-    text-align: left;
-    margin: 0;
-    padding-top: .2rem;
-    text-align: center;
-}
-
-.about-section {
-    margin-top: 10rem;
-    padding-bottom: 10rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 4rem;
-}
-
-.about-section-imagen {
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
     align-items: center;
+    /* Agrega un espacio entre las tarjetas si es necesario */
+    margin-top: -4rem;
+    /* Ajusta según sea necesario */
+    /* Agrega padding para compensar el margen negativo si es necesario */
 }
 
-.about-section-contenido h3 {
-    text-align: left;
+.card1 {
+    background-image: url('/img/shutterstock_768847741-scaled.jpg');
 }
 
-.about-section-contenido p {
-    text-align: left;
+.card2 {
+    background-image: url('/img/shutterstock_1823575601-scaled.jpg');
 }
 
-.about-section-contenido h3 {
-    text-align: left;
-    font-size: 2.6rem;
-    letter-spacing: .5rem;
-    text-transform: uppercase;
+.card3 {
+    background-image: url('/img/shutterstock_1478730752-scaled.jpg');
+}
+
+.card4 {
+    background-image: url('/img/Dimensiones-personalizadas-1080x1080-px.jpeg');
+}
+
+.card5 {
+    background-image: url('/img/mars-intelligence-assets-1.webp');
+}
+
+.card6 {
+    background-image: url('/img/56266eb0-7a2a-423b-91b0-745d4d3ee46a.jpg');
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 1rem;
+    overflow: hidden;
+    /* Asegura que el pseudo-elemento no se desborde */
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(211, 7, 7, 0.6), rgba(211, 7, 7, 0));
+    /* Gradiente rojo degradado */
+    opacity: 0;
+    /* Comienza totalmente transparente */
+    transition: opacity 0.3s ease-in-out;
+    /* Transición suave para la opacidad */
+    border-radius: 8px;
+    /* Respetar los bordes redondeados de la tarjeta */
+}
+
+.card:hover::before {
+    opacity: 1;
+    /* Hacer el degradado visible al pasar el ratón */
+}
+
+.card h1 {
+    position: relative;
+    /* Asegura que el texto esté por encima del pseudo-elemento */
     margin: 0;
-    padding-top: 2rem;
-}
-
-
-/**ABOUT**/
-
-.intermedio {
-    background-image: url(../img/parallax1.jpg);
-    text-align: center;
-    padding: 20rem 0;
-    border-bottom: 1rem solid var(--colorOrange);
-    border-top: 1rem solid var(--colorOrange);
-}
-
-.intermedio h2 {
-    font-size: 3rem;
-    letter-spacing: 1rem;
-    color: var(--colorBlanco);
-}
-
-.intermedio p {
-    font-size: 1.5rem;
-    color: var(--colorBlanco);
-}
-
-
-/**GALLERY**/
-
-.gallery {
-    text-align: center;
-}
-
-.gallery h2 {
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 1.2rem;
-    font-weight: 600;
-    padding-top: 10rem;
-}
-
-.gallery p {
-    font-size: 1.5rem;
-    text-align: left;
-    margin: 0;
-    padding-top: .2rem;
-    text-align: center;
-}
-
-.about-section-imagen {
-    margin: 8rem 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
-}
-
-
-/**CLIENTS SAY**/
-
-.clients-fondo {
-    text-align: center;
-    background-color: var(--colorFondo);
-    margin-bottom: 10rem;
-}
-
-.clients h2 {
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 1.2rem;
-    font-weight: 600;
-    padding-top: 10rem;
-}
-
-.clients p {
-    font-size: 1.5rem;
-    text-align: left;
-    margin: 0;
-    padding-top: .2rem;
-    text-align: center;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
