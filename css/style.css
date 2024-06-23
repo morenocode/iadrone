@@ -128,7 +128,7 @@ img {
     background-image: url(../img/baner1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 620px;
+    height: 820px;
     position: relative;
     padding-top: 3rem;
     animation: animate 10s infinite;
@@ -203,6 +203,7 @@ img {
 
 .main {
     border-top: 1rem solid var(--colorOrange);
+    background-color: black;
 }
 
 .servicios {
@@ -212,33 +213,33 @@ img {
     justify-items: center;
     align-items: center;
     /* Agrega un espacio entre las tarjetas si es necesario */
-    margin-top: -4rem;
+    margin-top: -12rem;
     /* Ajusta según sea necesario */
     /* Agrega padding para compensar el margen negativo si es necesario */
 }
 
 .card1 {
-    background-image: url('/img/shutterstock_768847741-scaled.jpg');
+    background-image: url('../img/shutterstock_768847741-scaled.jpg');
 }
 
 .card2 {
-    background-image: url('/img/shutterstock_1823575601-scaled.jpg');
+    background-image: url('../img/shutterstock_1823575601-scaled.jpg');
 }
 
 .card3 {
-    background-image: url('/img/shutterstock_1478730752-scaled.jpg');
+    background-image: url('../img/shutterstock_1478730752-scaled.jpg');
 }
 
 .card4 {
-    background-image: url('/img/Dimensiones-personalizadas-1080x1080-px.jpeg');
+    background-image: url('../img/Dimensiones-personalizadas-1080x1080-px.jpeg');
 }
 
 .card5 {
-    background-image: url('/img/mars-intelligence-assets-1.webp');
+    background-image: url('../img/mars-intelligence-assets-1.webp');
 }
 
 .card6 {
-    background-image: url('/img/56266eb0-7a2a-423b-91b0-745d4d3ee46a.jpg');
+    background-image: url('../img/56266eb0-7a2a-423b-91b0-745d4d3ee46a.jpg');
 }
 
 .card {
@@ -287,4 +288,131 @@ img {
     margin: 0;
     font-size: 24px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/**nosotros**/
+
+.nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: start;
+    margin: 4rem 0;
+    background-color: black;
+}
+
+.img-nosotros img {
+    width: 400px;
+}
+
+.titulo-nosotros {
+    margin-top: 0;
+    padding-right: 15rem;
+}
+
+.titulo-nosotros h2 {
+    margin: 0;
+    color: white;
+}
+
+.titulo-nosotros .linea {
+    margin: 0;
+}
+
+.titulo-nosotros p {
+    color: white;
+    text-align: justify;
+}
+
+
+/**nosotros**/
+
+.porque {
+    background-color: black;
+}
+
+.titulo-porque h2 {
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #04043b6e;
+    margin-top: 2rem;
+    /* Fondo oscuro del contenedor */
+}
+
+.beneficio {
+    flex-basis: 45%;
+    /* Ajusta esto según el tamaño deseado y la respuesta del diseño */
+    background-color: #000;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    position: relative;
+}
+
+.beneficio h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 0px;
+    color: #d30707;
+}
+
+.beneficio p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/**GALERIA**/
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/**WHATSAPP**/
+
+#whatsapp a {
+    background: none;
+    position: fixed;
+    top: 80%;
+    width: 110px;
+    right: 15px;
+    z-index: 9999;
+    transition: 0.5s;
+}
+
+#whatsapp a:hover {
+    position: fixed;
+    top: 80%;
+    width: 113px;
+    right: 15px;
+    z-index: 9999;
+}
+
+
+/**WHATSAPP**/
+
+@media (max-width: 768px) {
+    #whatsapp a {
+        background: none;
+        position: fixed;
+        top: 88%;
+        width: 90px;
+        right: 15px;
+    }
 }
